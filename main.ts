@@ -1,7 +1,8 @@
 while True:
     print(input.rotation(Rotation.ROLL))
-    if input.rotation(Rotation.ROLL) > 18 or input.rotation(Rotation.ROLL) < -18:
-        light.clear()
+    if input.rotation(Rotation.ROLL) > -78:
+        light.show_animation(light.rainbowAnimation, 500)
+        music.ba_ding.play_until_done()
     else:
-        light.show_animation(light.rainbow_animation, 100)
-        music.magic_wand.play_until_done()
+        light.clear()
+        music.stop_all_sounds()
